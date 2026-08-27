@@ -1,20 +1,20 @@
-package day06;
+package day_8;
 
 public class demo {
+
+    static void methodA() {
+        System.out.println("Inside methodA");
+        methodB();
+        System.out.println("Back to methodA");
+    }
+
+    static void methodB() {
+        System.out.println("Inside methodB");
+    }
+
     public static void main(String[] args) {
-
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 1; i <= 5; i++) {
-            sb.append(i);
-        }
-
-        char first = sb.charAt(0);
-        System.out.println("first character: " + first);
-
-        System.out.println("stringBuilder: " + sb);
-        
-        sb.deleteCharAt(2);
-        System.out.println("after deleting: " +sb);
+        System.out.println("Inside main");
+        methodA();
+        System.out.println("Back to main");
     }
 }
